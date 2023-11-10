@@ -1,6 +1,7 @@
 import Expenses from './components/Expenses/Expenses'
+import NewExpense from './components/NewExpense/NewExpense';
 
-//video 17 seen of chapter 3
+//video 10 seen of chapter 5
 
 const  App=()=> {
   const expenses = [
@@ -30,9 +31,13 @@ const  App=()=> {
     },
   ];
 
+  const addExpenseHandler=(expense)=>{
+    console.log(expense)
+  }
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler} />
      <Expenses items ={expenses} />
 
       </div>
